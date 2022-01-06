@@ -53,9 +53,11 @@ jobs:
     # - name: Install Pytest Annotate Failures
     #   run: pip install pytest-github-actions-annotate-failures
 
+#      - name: Test with pytest
+#        run: |
+#          pytest --exitfirst --verbose --failed-first \
+#          --cov=. --cov-report html
+        
       - name: Test with pytest
         run: |
-          pytest --exitfirst --verbose --failed-first \
-          --cov=. --cov-report html
-        
-        
+          pytest --verbose        
